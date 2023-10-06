@@ -195,6 +195,7 @@ nav {
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
 }
+
 .footer-wrapper {
   margin: 6rem 0rem;
   display: flex;
@@ -229,18 +230,6 @@ nav {
   font-weight: 600;
   color: #4c4c4c;
   cursor: pointer;
-}
-.testimonial-section-bottom {
-  margin-top: 2rem;
-  background-color: white;
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 750px;
-  border-radius: 2rem;
-  flex-direction: column;
-  text-align: center;
 }
 .testimonial-section-bottom {
   margin: 2rem auto;
