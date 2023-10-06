@@ -38,10 +38,10 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
-        <img src={Logo} alt="" />
+        <img src={Logo} width={180} alt="" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
+        <a href="">Главная</a>
         <a href="">About</a>
         <a href="">Testimonials</a>
         <a href="">Contact</a>

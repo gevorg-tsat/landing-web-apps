@@ -14,15 +14,14 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Your Favourite Food Delivered Hot & Fresh
+            Инфосистема отслеживания состояний устройств 
           </h1>
           <p className="primary-text">
-            Healthy switcher chefs do all the prep work, like peeding, chopping
-            & marinating, so you can cook a fresh food.
+            Интерфейсы для визуализации устройств и их режима работы в сети
           </p>
-          <button className="secondary-button">
+          {/* <button className="secondary-button">
             Order Now <FiArrowRight />{" "}
-          </button>
+          </button> */}
         </div>
         <div className="home-image-section">
           <img src={BannerImage} alt="" />
