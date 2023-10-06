@@ -1,7 +1,7 @@
 import React from "react";
 import Neuronet from "../Assets/neuronet-image.png";
-import ChooseMeals from "../Assets/choose-image.png";
-import DeliveryMeals from "../Assets/delivery-image.png";
+import FrontEnd from "../Assets/frontend-image.png";
+import BackEnd from "../Assets/backend-image.png";
 
 const Work = () => {
   const workInfoData = [
@@ -11,14 +11,14 @@ const Work = () => {
       text: "Будет разработана модель для определения состояния света в кабинете(вкл/выкл)",
     },
     {
-      image: ChooseMeals,
-      title: "Choose How Often",
-      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et ",
+      image: FrontEnd,
+      title: "FrontEnd",
+      text: "Страница в виде карты с возможностью перемещения по этажам",
     },
     {
-      image: DeliveryMeals,
-      title: "Fast Deliveries",
-      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et lorem ipsum",
+      image: BackEnd,
+      title: "BackEnd",
+      text: "Анализ состояния по сети. Передача и анализ видеопотока с камер",
     },
   ];
   return (
@@ -35,7 +35,7 @@ const Work = () => {
         {workInfoData.map((data) => (
           <div className="work-section-info" key={data.title}>
             <div className="info-boxes-img-container">
-              <img src={data.image} alt="" />
+              <img src={data.image} alt="" width="150"/>
             </div>
             <h2>{data.title}</h2>
             <p>{data.text}</p>
