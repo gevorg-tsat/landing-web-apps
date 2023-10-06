@@ -15,6 +15,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 
+/* TODO выпадающее меню из навбара и из контактов ссылки на тг и тд */
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
@@ -38,7 +39,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
-        <img src={Logo} width={180} alt="" />
+        <img src={Logo} width={200} alt="" />
       </div>
       <div className="navbar-links-container">
         <a href="">Главная</a>
