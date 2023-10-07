@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, MouseEvent} from "react";
+import React, { useState, MouseEvent } from "react";
 import Logo from "../Assets/Logo.svg";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
@@ -14,7 +14,27 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import { Menu, MenuItem, Button } from '@mui/material';
+import { NestedDropdown } from "mui-nested-menu";
+
+const menuItemsData = {
+  label: 'Меню',
+  items: [
+    {
+      label: 'Контакты',
+      items: [
+        {
+          label: 'ТГ',
+          callback: (event, item) => console.log('Save As > Option 1 clicked', event, item),
+        },
+        {
+          label: 'VK',
+          callback: (event, item) => console.log('Save As > Option 2 clicked', event, item),
+        },
+      ],
+    }
+  ],
+};
+
 /* TODO выпадающее меню из навбара и из контактов ссылки на тг и тд */
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -51,34 +71,18 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
         <a href="">Главная</a>
-        <a href="">About</a>
-        <a href="">Testimonials</a>
-        <a href="">Contact</a>
+        <a href="">О проекте</a>
+        <a href="">Работа</a>
+        <a href="">Команда</a>
       </div>
-      <div className="primary-button">
-        <Button
-          id="basic-button"
-          aria-controls={open ? 'basic-menu' : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}
-          onClick={handleClick}
-        >
-          Menu
-        </Button>
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            'aria-labelledby': 'basic-button',
-          }}
-        >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
-        </Menu>
-    </div>
+      <div>
+        <NestedDropdown
+          menuItemsData={menuItemsData}
+          MenuProps={{ elevation: 3 }}
+          ButtonProps={{ variant: 'outlined' }}
+          onClick={() => console.log('Clicked')}
+        />
+      </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
