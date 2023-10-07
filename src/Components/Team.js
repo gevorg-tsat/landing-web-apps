@@ -15,7 +15,7 @@ import Semen from "../Assets/semen-photo.jpg"
       slidesToScroll: 1,
     };
     return (
-      <div className="work-section-wrapper">
+      <div className="work-section-wrapper" id="team">
       <div className="work-section-top">
         <h2 className="primary-heading">Команда</h2>
       </div>

@@ -70,13 +70,14 @@ const Navbar = () => {
         <img src={Logo} width={200} alt="" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Главная</a>
-        <a href="">О проекте</a>
-        <a href="">Работа</a>
-        <a href="">Команда</a>
+        <a href="#home">Главная</a>
+        <a href="#about">О проекте</a>
+        <a href="#work">Работа</a>
+        <a href="#team">Команда</a>
       </div>
       <div>
         <NestedDropdown
+          className={"nested-menu"}
           menuItemsData={menuItemsData}
           MenuProps={{ elevation: 3 }}
           ButtonProps={{ variant: 'outlined' }}

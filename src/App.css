@@ -415,3 +415,16 @@ nav {
     display: none;
   }
 }
+
+.nested-menu > button {
+  color: black;
+  border: 1px solid black;
+}
+
+.nested-menu > button:hover {
+  border: 1px solid gray;
+}
+
+html {
+  scroll-behavior: smooth;
+}
